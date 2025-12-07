@@ -67,6 +67,11 @@
 </script>
 </head>
   <body>
+    <script>
+  if (window.inEditorMode) {
+    import("./src/registerCloudCannon.ts").catch(console.error);
+  }
+</script>
     <div id="root"></div>
   </body>
 </html>
