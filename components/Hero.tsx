@@ -1,8 +1,8 @@
 // components/Hero.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { HERO_COPY, ASSETS } from '../constants';
-import { fadeUp, staggerContainer } from '../services/animationService';
+import React from "react";
+import { motion } from "framer-motion";
+import { HERO_COPY, ASSETS } from "../constants";
+import { fadeUp, staggerContainer } from "../services/animationService";
 
 const Hero: React.FC = () => {
   return (
@@ -18,7 +18,6 @@ const Hero: React.FC = () => {
         >
           <source src={ASSETS.video} type="video/mp4" />
         </video>
-        {/* Dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-brand-dark/40 mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent" />
       </div>
@@ -35,7 +34,7 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="text-white uppercase tracking-[0.2em] text-sm font-bold bg-brand-accent inline-block px-4 py-2 rounded-full border border-brand-accent"
               data-editable="text"
-              data-prop="pretitle"
+              data-prop='@file[constants.ts].HERO_COPY.pretitle'
             >
               {HERO_COPY.pretitle}
             </motion.p>
@@ -46,7 +45,7 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="block"
               data-editable="text"
-              data-prop="title"
+              data-prop='@file[constants.ts].HERO_COPY.title'
             >
               {HERO_COPY.title}
             </motion.span>
@@ -54,7 +53,7 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="block text-white/70 italic font-serif"
               data-editable="text"
-              data-prop="subtitle"
+              data-prop='@file[constants.ts].HERO_COPY.subtitle'
             >
               {HERO_COPY.subtitle}
             </motion.span>
@@ -64,7 +63,7 @@ const Hero: React.FC = () => {
             variants={fadeUp}
             className="text-lg md:text-xl text-white/90 max-w-lg mb-12 font-normal leading-relaxed drop-shadow-lg"
             data-editable="text"
-            data-prop="description"
+            data-prop='@file[constants.ts].HERO_COPY.description'
           >
             {HERO_COPY.description}
           </motion.p>
@@ -73,7 +72,7 @@ const Hero: React.FC = () => {
             <button
               className="bg-brand-accent text-white px-8 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-lg hover:shadow-brand-accent/20"
               data-editable="text"
-              data-prop="ctaPrimary"
+              data-prop='@file[constants.ts].HERO_COPY.ctaPrimary'
             >
               {HERO_COPY.ctaPrimary}
             </button>
@@ -98,4 +97,5 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
 
