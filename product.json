@@ -1,7 +1,14 @@
 {
-  "introTitle": "Pijnlijke billen",
-  "introHighlight": "verleden tijd.",
-  "introText": "Samen op de fiets. Onderweg naar nieuwe herinneringen...",
+  "introTitleLine1": "Pijnlijke billen",
+  "introTitleHighlight": "verleden tijd.",
+  "introDescription": "Samen op de fiets. Onderweg naar nieuwe herinneringen. Maar voorop de stang? Instabiel, hard en ongemakkelijk.",
   "slide1Title": "Samen op weg.",
-  "slide1Text": "Comfortabel. Stijlvol. Samen. Elke rit een beleving."
+  "slide1Description": "Comfortabel. Stijlvol. Samen. Elke rit een beleving.",
+  "slide2Title": "Perfecte match",
+  "slide2Description": "Minimalistisch en slim design. Past bij elke urban e-bike. Matte look met bordeauxrode accenten.",
+  "slide3Title": "Team zadelmaatje",
+  "slide3Quote": "\"Een comfy zitplek op de fietsstang voor je maatjes of soulmate bestond nog niet. Tot nu toe.\"",
+  "slide3SignOff": "Liefs, Jafeth, Tash en Floris",
+  "ctaTitle": "Klaar voor de rit?",
+  "ctaButton": "Pre-order nu"
 }
