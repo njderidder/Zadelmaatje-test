@@ -4,32 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zadelmaatje | Luxe zitkussen voor e-bike stang</title>
+
+    <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"DM Sans"', 'sans-serif'],
+              sans: ['"DM Sans"', "sans-serif"],
             },
             colors: {
               brand: {
-                dark: '#0f0f0f',
-                accent: '#6d1b23', // Bordeaux red from original
-                light: '#f4f4f5',
-                glass: 'rgba(255, 255, 255, 0.05)',
-              }
+                dark: "#0f0f0f",
+                accent: "#6d1b23", // Bordeaux rood
+                light: "#f4f4f5",
+                glass: "rgba(255, 255, 255, 0.05)",
+              },
             },
             backgroundImage: {
-              'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')",
-            }
-          }
-        }
-      }
+              noise:
+                "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')",
+            },
+          },
+        },
+      };
     </script>
+
     <style>
       body {
         background-color: #0f0f0f;
@@ -51,27 +61,27 @@
         background: #6d1b23;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "three": "https://aistudiocdn.com/three@^0.181.2",
-    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.2",
-    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
-  }
-}
-</script>
-</head>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://aistudiocdn.com/three@^0.181.2",
+          "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.2",
+          "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+          "react/": "https://aistudiocdn.com/react@^19.2.1/",
+          "react": "https://aistudiocdn.com/react@^19.2.1",
+          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+        }
+      }
+    </script>
+  </head>
   <body>
-    <script>
-  if (window.inEditorMode) {
-    import("./src/registerCloudCannon.ts").catch(console.error);
-  }
-</script>
     <div id="root"></div>
+
+    <!-- Start je React app via Vite -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
+
