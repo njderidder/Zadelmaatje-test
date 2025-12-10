@@ -1,10 +1,23 @@
-[
-  {
-    "title": "Universele bevestiging",
-    "description": "Perfect aansluitend op jouw e-bike..."
-  },
-  {
-    "title": "Weerbestendig",
-    "description": "Bestand tegen het onvoorspelbare Nederlandse weer..."
-  }
-]
+{
+  "sectionTitle": "Specificaties",
+  "mainTitleLine1": "Ontworpen voor de",
+  "mainTitleLine2": "Urban Jungle.",
+  "items": [
+    {
+      "title": "Universele bevestiging",
+      "description": "Perfect aansluitend op jouw e-bike. Dankzij de verstelbare klittenband-aansluiting makkelijk te bevestigen op o.a. VanMoof, Veloretti en Tenways."
+    },
+    {
+      "title": "Weerbestendig",
+      "description": "Bestand tegen het onvoorspelbare Nederlandse weer. Door de water-resistant buitenhoes, HR-schuim en speciale stiksels."
+    },
+    {
+      "title": "Zacht, zachter, zachtst",
+      "description": "De ultieme bijrijder ervaring door het comfortabele HR-schuim. Geliefd door de ondersteuning, veerkracht en lange levensduur."
+    },
+    {
+      "title": "Met vertrouwen op weg",
+      "description": "De antislip laag aan de binnenkant en de stevige Velcro-aansluiting verzekert een soepele rit met z’n tweeën."
+    }
+  ]
+}
