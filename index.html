@@ -61,19 +61,7 @@
     </style>
   </head>
   <body>
-    <!-- Alleen in CloudCannon editor de component-registratie laden -->
-    <script type="module">
-      if (window.inEditorMode) {
-        import('/collection/registerCloudCannon.ts').catch((error) => {
-          console.warn(
-            'Failed to load CloudCannon component registration',
-            error
-          );
-        });
-      }
-    </script>
-
-    <!-- Vite entrypoint (let op: nu binnen /collection) -->
+    <!-- Vite entrypoint binnen /collection -->
     <script type="module" src="/collection/index.tsx"></script>
 
     <div id="root"></div>
