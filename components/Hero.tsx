@@ -1,8 +1,10 @@
-// components/Hero.tsx
 import React from "react";
 import { motion } from "framer-motion";
-import { HERO_COPY, ASSETS } from "../constants";
+import { ASSETS } from "../constants";
 import { fadeUp, staggerContainer } from "../services/animationService";
+
+// JSON met copy
+import heroCopy from "../hero.json";
 
 const Hero: React.FC = () => {
   return (
@@ -34,9 +36,9 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="text-white uppercase tracking-[0.2em] text-sm font-bold bg-brand-accent inline-block px-4 py-2 rounded-full border border-brand-accent"
               data-editable="text"
-              data-prop='@file[constants.ts].HERO_COPY.pretitle'
+              data-prop="@file[hero.json].pretitle"
             >
-              {HERO_COPY.pretitle}
+              {heroCopy.pretitle}
             </motion.p>
           </div>
 
@@ -45,17 +47,17 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="block"
               data-editable="text"
-              data-prop='@file[constants.ts].HERO_COPY.title'
+              data-prop="@file[hero.json].title"
             >
-              {HERO_COPY.title}
+              {heroCopy.title}
             </motion.span>
             <motion.span
               variants={fadeUp}
               className="block text-white/70 italic font-serif"
               data-editable="text"
-              data-prop='@file[constants.ts].HERO_COPY.subtitle'
+              data-prop="@file[hero.json].subtitle"
             >
-              {HERO_COPY.subtitle}
+              {heroCopy.subtitle}
             </motion.span>
           </h1>
 
@@ -63,18 +65,18 @@ const Hero: React.FC = () => {
             variants={fadeUp}
             className="text-lg md:text-xl text-white/90 max-w-lg mb-12 font-normal leading-relaxed drop-shadow-lg"
             data-editable="text"
-            data-prop='@file[constants.ts].HERO_COPY.description'
+            data-prop="@file[hero.json].description"
           >
-            {HERO_COPY.description}
+            {heroCopy.description}
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
             <button
               className="bg-brand-accent text-white px-8 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-lg hover:shadow-brand-accent/20"
               data-editable="text"
-              data-prop='@file[constants.ts].HERO_COPY.ctaPrimary'
+              data-prop="@file[hero.json].ctaPrimary"
             >
-              {HERO_COPY.ctaPrimary}
+              {heroCopy.ctaPrimary}
             </button>
           </motion.div>
         </motion.div>
@@ -97,5 +99,6 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
 
 
