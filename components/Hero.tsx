@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ASSETS } from "../constants";
 import { fadeUp, staggerContainer } from "../services/animationService";
 
-// JSON met copy
+// JSON met hero copy
 import heroCopy from "../hero.json";
 
 const Hero: React.FC = () => {
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="text-white uppercase tracking-[0.2em] text-sm font-bold bg-brand-accent inline-block px-4 py-2 rounded-full border border-brand-accent"
               data-editable="text"
-              data-prop="@file[hero.json].pretitle"
+              data-prop="pretitle"
             >
               {heroCopy.pretitle}
             </motion.p>
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="block"
               data-editable="text"
-              data-prop="@file[hero.json].title"
+              data-prop="title"
             >
               {heroCopy.title}
             </motion.span>
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
               variants={fadeUp}
               className="block text-white/70 italic font-serif"
               data-editable="text"
-              data-prop="@file[hero.json].subtitle"
+              data-prop="subtitle"
             >
               {heroCopy.subtitle}
             </motion.span>
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             variants={fadeUp}
             className="text-lg md:text-xl text-white/90 max-w-lg mb-12 font-normal leading-relaxed drop-shadow-lg"
             data-editable="text"
-            data-prop="@file[hero.json].description"
+            data-prop="description"
           >
             {heroCopy.description}
           </motion.p>
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
             <button
               className="bg-brand-accent text-white px-8 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-lg hover:shadow-brand-accent/20"
               data-editable="text"
-              data-prop="@file[hero.json].ctaPrimary"
+              data-prop="ctaPrimary"
             >
               {heroCopy.ctaPrimary}
             </button>
@@ -99,6 +99,7 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
 
 
 
