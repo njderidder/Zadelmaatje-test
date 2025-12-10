@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zadelmaatje | Luxe zitkussen voor e-bike stang</title>
 
-    <!-- Tailwind via CDN -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,14 +20,14 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"DM Sans"', "sans-serif"],
+              sans: ['"DM Sans"', 'sans-serif'],
             },
             colors: {
               brand: {
-                dark: "#0f0f0f",
-                accent: "#6d1b23", // Bordeaux rood
-                light: "#f4f4f5",
-                glass: "rgba(255, 255, 255, 0.05)",
+                dark: '#0f0f0f',
+                accent: '#6d1b23',
+                light: '#f4f4f5',
+                glass: 'rgba(255, 255, 255, 0.05)',
               },
             },
             backgroundImage: {
@@ -46,7 +45,6 @@
         color: #f4f4f5;
         overflow-x: hidden;
       }
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -61,27 +59,25 @@
         background: #6d1b23;
       }
     </style>
-
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://aistudiocdn.com/three@^0.181.2",
-          "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.2",
-          "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
-          "react/": "https://aistudiocdn.com/react@^19.2.1/",
-          "react": "https://aistudiocdn.com/react@^19.2.1",
-          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
-          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
-        }
-      }
-    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Alleen in CloudCannon editor de component-registratie laden -->
+    <script type="module">
+      if (window.inEditorMode) {
+        import('/collection/registerCloudCannon.ts').catch((error) => {
+          console.warn(
+            'Failed to load CloudCannon component registration',
+            error
+          );
+        });
+      }
+    </script>
 
-    <!-- Start je React app via Vite -->
-    <script type="module" src="/index.tsx"></script>
+    <!-- Vite entrypoint (let op: nu binnen /collection) -->
+    <script type="module" src="/collection/index.tsx"></script>
+
+    <div id="root"></div>
   </body>
 </html>
+
 
