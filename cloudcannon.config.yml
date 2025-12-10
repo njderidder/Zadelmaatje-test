@@ -4,4 +4,11 @@ collections_config:
     icon: wysiwyg
     url: /
 
-
+# Voeg dit gedeelte toe:
+data_config:
+  hero:
+    path: hero.json
+    icon: title
+  metadata:
+    path: metadata.json
+    icon: info
