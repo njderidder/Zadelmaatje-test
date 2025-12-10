@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ASSETS } from '../constants';
+import productData from '../product.json';
 
 const ProductScroll: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,11 +22,11 @@ const ProductScroll: React.FC = () => {
             {/* Intro Text */}
             <div className="min-w-[90vw] md:min-w-[40vw] flex flex-col justify-center">
                  <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-none">
-                    Pijnlijke billen <br />
-                    <span className="text-brand-accent">verleden tijd.</span>
+                    <span data-editable="text" data-prop="@file[/product.json].introTitleLine1">{productData.introTitleLine1}</span> <br />
+                    <span className="text-brand-accent" data-editable="text" data-prop="@file[/product.json].introTitleHighlight">{productData.introTitleHighlight}</span>
                 </h2>
-                <p className="text-xl text-white/60 max-w-md">
-                    Samen op de fiets. Onderweg naar nieuwe herinneringen. Maar voorop de stang? Instabiel, hard en ongemakkelijk.
+                <p className="text-xl text-white/60 max-w-md" data-editable="text" data-prop="@file[/product.json].introDescription">
+                    {productData.introDescription}
                 </p>
             </div>
 
@@ -38,8 +39,8 @@ const ProductScroll: React.FC = () => {
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-10 flex flex-col justify-end">
-                        <h3 className="text-4xl font-bold text-white mb-2">Samen op weg.</h3>
-                        <p className="text-white/70 max-w-md font-light">Comfortabel. Stijlvol. Samen. Elke rit een beleving.</p>
+                        <h3 className="text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/product.json].slide1Title">{productData.slide1Title}</h3>
+                        <p className="text-white/70 max-w-md font-light" data-editable="text" data-prop="@file[/product.json].slide1Description">{productData.slide1Description}</p>
                     </div>
                 </div>
             </div>
@@ -53,8 +54,8 @@ const ProductScroll: React.FC = () => {
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-10 flex flex-col justify-end">
-                        <h3 className="text-4xl font-bold text-white mb-2">Perfecte match</h3>
-                        <p className="text-white/70 max-w-md font-light">Minimalistisch en slim design. Past bij elke urban e-bike. Matte look met bordeauxrode accenten.</p>
+                        <h3 className="text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/product.json].slide2Title">{productData.slide2Title}</h3>
+                        <p className="text-white/70 max-w-md font-light" data-editable="text" data-prop="@file[/product.json].slide2Description">{productData.slide2Description}</p>
                     </div>
                 </div>
             </div>
@@ -76,22 +77,22 @@ const ProductScroll: React.FC = () => {
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-10 flex flex-col justify-end">
-                        <h3 className="text-4xl font-bold text-white mb-2">Team zadelmaatje</h3>
-                        <p className="text-white/70 max-w-lg font-light italic">
-                            "Een comfy zitplek op de fietsstang voor je maatjes of soulmate bestond nog niet. Tot nu toe."
+                        <h3 className="text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/product.json].slide3Title">{productData.slide3Title}</h3>
+                        <p className="text-white/70 max-w-lg font-light italic" data-editable="text" data-prop="@file[/product.json].slide3Quote">
+                            {productData.slide3Quote}
                         </p>
-                        <p className="text-brand-accent mt-2 text-sm font-bold uppercase tracking-widest">Liefs, Jafeth, Tash en Floris</p>
+                        <p className="text-brand-accent mt-2 text-sm font-bold uppercase tracking-widest" data-editable="text" data-prop="@file[/product.json].slide3SignOff">{productData.slide3SignOff}</p>
                     </div>
                 </div>
             </div>
 
             {/* Final CTA */}
             <div className="min-w-[80vw] md:min-w-[40vw] flex flex-col justify-center px-10">
-                <h2 className="text-5xl font-bold text-white mb-6">
-                    Klaar voor de rit?
+                <h2 className="text-5xl font-bold text-white mb-6" data-editable="text" data-prop="@file[/product.json].ctaTitle">
+                    {productData.ctaTitle}
                 </h2>
-                <button className="bg-brand-accent text-white px-8 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 self-start">
-                    Pre-order nu
+                <button className="bg-brand-accent text-white px-8 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 self-start" data-editable="text" data-prop="@file[/product.json].ctaButton">
+                    {productData.ctaButton}
                 </button>
             </div>
         </motion.div>
