@@ -9,5 +9,14 @@ data_config:
     path: /hero.json
     icon: title
   metadata:
-    path: metadata.json
+    path: /metadata.json
     icon: info
+  product:
+    path: /product.json
+    icon: list
+  features:
+    path: /features.json
+    icon: check_circle
+  footer:
+    path: /footer.json
+    icon: link
