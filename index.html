@@ -61,25 +61,13 @@
     </style>
   </head>
   <body>
-    <!-- Root voor React, moet er staan voordat index.tsx runt -->
     <div id="root"></div>
 
-    <!-- Alleen in CloudCannon editor de component-registratie laden -->
-    <script type="module">
-      if (window.inEditorMode) {
-        import('/collection/registerCloudCannon.ts').catch((error) => {
-          console.warn(
-            'Failed to load CloudCannon component registration',
-            error
-          );
-        });
-      }
-    </script>
-
-    <!-- Vite entrypoint (binnen /collection) -->
+    <!-- Vite entrypoint binnen /collection -->
     <script type="module" src="/collection/index.tsx"></script>
   </body>
 </html>
+
 
 
 
