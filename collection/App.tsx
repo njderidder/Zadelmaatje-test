@@ -1,9 +1,10 @@
+// collection/App.tsx
 import React from "react";
-import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
-import ProductScroll from "./components/ProductScroll";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
+import Navigation from "../components/Navigation";
+import Hero from "../components/Hero";
+import ProductScroll from "../components/ProductScroll";
+import Features from "../components/Features";
+import Footer from "../components/Footer";
 import { EditableComponent } from "@cloudcannon/editable-regions/react";
 
 const App: React.FC = () => {
@@ -26,3 +27,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+
