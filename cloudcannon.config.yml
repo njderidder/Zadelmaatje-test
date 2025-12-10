@@ -7,5 +7,6 @@ markdown:
   options: {}
 collections_config:
   pages:
-    path: ''
+    path: collection
     icon: wysiwyg
+
