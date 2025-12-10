@@ -1,4 +1,3 @@
-// collection/App.tsx
 import React from "react";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
@@ -6,15 +5,30 @@ import ProductScroll from "../components/ProductScroll";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "editable-component": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      > & {
+        "data-prop"?: string;
+        "data-component"?: string;
+      };
+    }
+  }
+}
+
 const App: React.FC = () => {
   return (
     <div className="bg-brand-dark min-h-screen text-white bg-noise selection:bg-brand-accent selection:text-white">
       <Navigation />
       <main>
-        {/* Hero. Teksten zelf editable in Hero.tsx via data-editable */}
-        <Hero />
+        {/* Hero is nu 1 component editable region met hero.json als data */}
+        <editable-component data-prop="@file[hero.json]" data-component="hero">
+          <Hero />
+        </editable-component>
 
-        {/* De rest kunnen we later ook editable maken */}
         <ProductScroll />
         <Features />
       </main>
@@ -24,5 +38,6 @@ const App: React.FC = () => {
 };
 
 export default App;
+
 
 
