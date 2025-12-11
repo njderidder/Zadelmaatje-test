@@ -1,5 +1,8 @@
 import { NavItem, FeatureItem } from './types';
 
+// 👇 Dit zorgt dat linkjes op GitHub Pages (/Zadelmaatje-test/...) ook werken!
+const BASE = import.meta.env.BASE_URL;
+
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Over ons', href: '#over-ons' },
   { label: 'Amore', href: '#product' },
@@ -35,25 +38,26 @@ export const HERO_COPY = {
 };
 
 export const ASSETS = {
-  // Let op: deze video staat in de map 'videos'
-  video: "/videos/tinyvid_optimized_zadelmaatje-Het-kussentje-waarbij-liefde-voorop-gaat.mp4",
-  logo: "/images/Logo-zadelmaatje-400-x-100-px.png",
+  // Let op: 'BASE' plakt automatisch de juiste map ervoor (of niets op Vercel)
+  // En: Ik heb de bestandsnamen aangepast aan jouw screenshot!
+  
+  video: `${BASE}videos/tinyvid_optimized_zadelmaatje-Het-kussentje-waarbij-liefde-voorop-gaat.mp4`,
+  logo: `${BASE}images/Logo-zadelmaatje-400-x-100-px.png`,
+  
   images: {
-    // Ik zag deze niet in je lijstje, dus heb even de stang-3 gepakt. 
-    // Als je een andere landscape foto hebt geupload, pas de naam hieronder aan!
-    productMain: "/images/zadelmaatje_amore_fietskussen_stang-3.jpg",
-    productLandscape: "/images/zadelmaatje_amore_fietskussen_stang-3.jpg", 
+    // 'stang-3' is de enige die je hebt geupload als main product shot
+    productMain: `${BASE}images/zadelmaatje_amore_fietskussen_stang-3.jpg`,
+    productLandscape: `${BASE}images/zadelmaatje_amore_fietskussen_stang-3.jpg`, 
     
-    lifestyle1: "/images/IMG_6739-768x512.jpg",
+    lifestyle1: `${BASE}images/IMG_6739-768x512.jpg`,
+    lifestyle2: `${BASE}images/Website-afbeelding-2-1-600x400.png`, 
     
-    // Deze zag ik niet in je uploadlijst, check even of je deze hebt geupload, anders werkt hij niet!
-    // Ik heb hem even op de IMG_6739 gezet als fallback.
-    lifestyle2: "/images/IMG_6739-768x512.jpg", 
+    founders: `${BASE}images/zadelmaatje-oprichters-768x432.webp`,
     
-    founders: "/images/zadelmaatje-oprichters-768x432.webp",
-    square1: "/images/zadelmaatje-museumplein-voorop-de-stang-vanmoof-300x300.png",
-    square2: "/images/1-1-300x300.png",
-    square3: "/images/zadelmaatje-amsterdam-fietsen-300x300.png",
-    square4: "/images/2-2-300x300.png"
+    // Deze hadden allemaal -300x300 in de naam in jouw screenshot
+    square1: `${BASE}images/zadelmaatje-museumplein-voorop-de-stang-vanmoof-300x300.png`,
+    square2: `${BASE}images/1-1-300x300.png`,
+    square3: `${BASE}images/zadelmaatje-amsterdam-fietsen-300x300.png`,
+    square4: `${BASE}images/2-2-300x300.png`
   }
 };
