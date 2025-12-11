@@ -1,45 +1,37 @@
+# 1. Definieer je 'Collecties' (De mapjes in je zijbalk)
 collections_config:
+  # Dit is puur de ingang voor de Visual Editor
   pages:
     path: ''
-    name: Homepage
+    name: Pages
     icon: wysiwyg
     url: /
+    # Filter: Laat ALLEEN index.html zien als "Pagina"
     filter:
-      exclude:
-        # 1. Verberg de mappen die je niet wilt zien
-        - collection
-        - collection/*
-        - components
-        - components/*
-        - node_modules
-        - dist
-        - public
-        
-        # 2. Verberg specifieke technische bestanden (maar NIET je content json's)
-        - package.json
-        - package-lock.json
-        - tsconfig.json
-        - metadata.json
-        - vite.config.ts
-        - cloudcannon.config.yml
-        - '*.ts'
-        - '*.js'
-        - '*.md'
-        - .gitignore
+      include:
+        - index.html
 
+  # Dit is je globale data (Footer, Navigatie)
+  global_data:
+    path: data/global
+    name: Global Elements
+    icon: public
+    # Hier kun je de data direct bewerken zonder de visual editor te openen
+    
+  # Dit is de content per pagina (Hero, Features, etc.)
+  page_content:
+    path: data/pages
+    name: Page Content
+    icon: notes
+    # Handig als je snel een tekstje wil aanpassen zonder de hele site te laden
+
+# 2. Vertel de Visual Editor waar de data NU staat
 data_config:
   hero:
-    path: /hero.json
-    icon: title
-  metadata:
-    path: /metadata.json
-    icon: info
+    path: data/pages/home/hero.json
   product:
-    path: /product.json
-    icon: list
+    path: data/pages/home/product.json
   features:
-    path: /features.json
-    icon: check_circle
+    path: data/pages/home/features.json
   footer:
-    path: /footer.json
-    icon: link
+    path: data/global/footer.json
