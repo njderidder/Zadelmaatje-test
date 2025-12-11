@@ -19,18 +19,18 @@ const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number 
             <div className="mb-6 text-brand-accent group-hover:scale-110 transition-transform duration-300">
                 <Icon size={32} />
             </div>
-            {/* Let op de index in de data-prop voor de lijst items */}
+            {/* Let op het nieuwe pad in de data-prop */}
             <h3 
                 className="text-2xl font-bold text-white mb-4"
                 data-editable="text"
-                data-prop={`@file[/data/pages/home/features.json].items.${index}.title`}
+                data-prop={`@file[data/pages/home/features.json].items.${index}.title`}
             >
                 {item.title}
             </h3>
             <p 
                 className="text-white/60 leading-relaxed font-light"
                 data-editable="text"
-                data-prop={`@file[/data/pages/home/features.json].items.${index}.description`}
+                data-prop={`@file[data/pages/home/features.json].items.${index}.description`}
             >
                 {item.description}
             </p>
@@ -48,7 +48,7 @@ const Features: React.FC = () => {
                         whileInView={{ opacity: 1 }}
                         className="text-sm uppercase tracking-widest text-brand-accent mb-4 font-bold"
                         data-editable="text"
-                        data-prop="@file[/data/pages/home/features.json].sectionTitle"
+                        data-prop="@file[data/pages/home/features.json].sectionTitle"
                     >
                         {featuresData.sectionTitle}
                     </motion.h2>
@@ -57,8 +57,8 @@ const Features: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-6xl font-bold text-white max-w-3xl leading-tight"
                     >
-                        <span data-editable="text" data-prop="@file[/features.json].mainTitleLine1">{featuresData.mainTitleLine1}</span> <br /> 
-                        <span data-editable="text" data-prop="@file[/features.json].mainTitleLine2">{featuresData.mainTitleLine2}</span>
+                        <span data-editable="text" data-prop="@file[data/pages/home/features.json].mainTitleLine1">{featuresData.mainTitleLine1}</span> <br /> 
+                        <span data-editable="text" data-prop="@file[data/pages/home/features.json].mainTitleLine2">{featuresData.mainTitleLine2}</span>
                     </motion.h3>
                 </div>
 
