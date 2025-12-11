@@ -19,7 +19,6 @@ const ProductScroll: React.FC = () => {
         
         <motion.div style={{ x }} className="flex gap-10 md:gap-20 px-6 md:px-20 items-center">
             
-            {/* Intro Text */}
             <div className="min-w-[90vw] md:min-w-[40vw] flex flex-col justify-center">
                  <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-none">
                     <span data-editable="text" data-prop="@file[data/pages/home/product.json].introTitleLine1">{productData.introTitleLine1}</span> <br />
@@ -30,7 +29,6 @@ const ProductScroll: React.FC = () => {
                 </p>
             </div>
 
-            {/* Slide 1 - Lifestyle */}
             <div className="min-w-[85vw] md:min-w-[60vw] relative group">
                 <div className="aspect-square md:aspect-[16/9] rounded-sm overflow-hidden bg-zinc-900 relative">
                      <img 
@@ -47,7 +45,6 @@ const ProductScroll: React.FC = () => {
                 </div>
             </div>
 
-             {/* Slide 2 - Product Detail */}
             <div className="min-w-[85vw] md:min-w-[50vw] relative group">
                 <div className="aspect-[3/4] rounded-sm overflow-hidden bg-zinc-900 relative">
                      <img 
@@ -62,7 +59,6 @@ const ProductScroll: React.FC = () => {
                 </div>
             </div>
 
-            {/* Slide 3 - Grid of images */}
             <div className="min-w-[90vw] md:min-w-[70vw] grid grid-cols-2 gap-4">
                  <img src={ASSETS.images.square1} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 1" />
                  <img src={ASSETS.images.square2} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 2" />
@@ -70,7 +66,6 @@ const ProductScroll: React.FC = () => {
                  <img src={ASSETS.images.square4} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 4" />
             </div>
 
-             {/* Slide 4 - Founders */}
             <div className="min-w-[85vw] md:min-w-[60vw] relative group">
                 <div className="aspect-square md:aspect-[16/9] rounded-sm overflow-hidden bg-zinc-900 relative">
                      <img 
@@ -90,7 +85,6 @@ const ProductScroll: React.FC = () => {
                 </div>
             </div>
 
-            {/* Final CTA */}
             <div className="min-w-[80vw] md:min-w-[40vw] flex flex-col justify-center px-10">
                 <h2 className="text-5xl font-bold text-white mb-6" data-editable="text" data-prop="@file[data/pages/home/product.json].ctaTitle">
                     {productData.ctaTitle}
@@ -101,7 +95,6 @@ const ProductScroll: React.FC = () => {
             </div>
         </motion.div>
 
-        {/* Floating progress indicator */}
         <motion.div 
             style={{ scaleX: scrollYProgress, opacity }} 
             className="absolute bottom-0 left-0 right-0 h-1 bg-brand-accent origin-left" 
