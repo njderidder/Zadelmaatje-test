@@ -33,12 +33,9 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-t border-white/10 pt-10">
-            {/* Dynamische Link Secties - GEEN data-editable op de items om errors te voorkomen */}
             {footerData.linkGroups.map((group, groupIndex) => (
                 <div key={groupIndex}>
-                    <h4 
-                        className="text-white font-bold mb-4 uppercase text-sm tracking-widest"
-                    >
+                    <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-widest">
                         {group.title}
                     </h4>
                     <ul className="space-y-3 text-white/60 text-sm">
