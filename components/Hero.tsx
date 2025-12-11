@@ -7,7 +7,6 @@ import heroCopy from "../data/pages/home/hero.json";
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0">
         <video
           autoPlay
