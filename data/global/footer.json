@@ -8,5 +8,30 @@
   "contactKvk": "KvK-nummer: 96652195",
   "contactCity": "Amsterdam, NL",
   "copyright": "© 2025 zadelmaatje. Alle rechten voorbehouden.",
-  "tagline": "Liefde gaat voorop. Born in Amsterdam."
+  "tagline": "Liefde gaat voorop. Born in Amsterdam.",
+  "linkGroups": [
+    {
+      "title": "zadelmaatje",
+      "links": [
+        { "label": "Over ons", "url": "#over-ons" },
+        { "label": "zadelmaatje ‘Amore’", "url": "#product" },
+        { "label": "Veel gestelde vragen (FAQ)", "url": "#faq" }
+      ]
+    },
+    {
+      "title": "Privacy",
+      "links": [
+        { "label": "Privacy Policy", "url": "#" },
+        { "label": "Algemene voorwaarden", "url": "#" }
+      ]
+    },
+    {
+      "title": "Socials",
+      "links": [
+        { "label": "Instagram", "url": "https://www.instagram.com/zadelmaatje" },
+        { "label": "TikTok", "url": "https://www.tiktok.com/@zadelmaatje" },
+        { "label": "LinkedIn", "url": "https://www.linkedin.com/company/zadelmaatje/" }
+      ]
+    }
+  ]
 }
