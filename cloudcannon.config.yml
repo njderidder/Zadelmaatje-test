@@ -10,6 +10,9 @@ collections_config:
     filter:
       include:
         - index.html
+      exclude:
+        - collection
+        - collection/*
 
   # Dit is je globale data (Footer, Navigatie)
   global_data:
