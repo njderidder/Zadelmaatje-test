@@ -14,6 +14,8 @@ const Hero: React.FC = () => {
           loop
           muted
           playsInline
+          // 👇 DIT IS DE NIEUWE REGEL:
+          poster={ASSETS.images.productLandscape} 
           className="w-full h-full object-cover opacity-60"
         >
           <source src={ASSETS.video} type="video/mp4" />
@@ -97,7 +99,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
-
-
-
