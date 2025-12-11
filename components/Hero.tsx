@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ASSETS } from "../constants";
 import { fadeUp, staggerContainer } from "../services/animationService";
-import heroCopy from "../hero.json";
+import heroCopy from "../data/pages/home/hero.json";
 
 const Hero: React.FC = () => {
   return (
