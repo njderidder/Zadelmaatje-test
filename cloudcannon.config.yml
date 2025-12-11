@@ -1,3 +1,4 @@
+uploads_dir: public/images
 collections_config:
   pages:
     path: ''
