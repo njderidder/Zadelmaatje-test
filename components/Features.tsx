@@ -23,7 +23,7 @@ const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number 
             <h3 
                 className="text-2xl font-bold text-white mb-4"
                 data-editable="text"
-                data-prop={`@file[/features.json].items.${index}.title`}
+                data-prop={`@file[/data/pages/home/features.json].items.${index}.title`}
             >
                 {item.title}
             </h3>
@@ -48,7 +48,7 @@ const Features: React.FC = () => {
                         whileInView={{ opacity: 1 }}
                         className="text-sm uppercase tracking-widest text-brand-accent mb-4 font-bold"
                         data-editable="text"
-                        data-prop="@file[/features.json].sectionTitle"
+                        data-prop="@file[/data/pages/home/features.json].sectionTitle"
                     >
                         {featuresData.sectionTitle}
                     </motion.h2>
