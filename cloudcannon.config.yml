@@ -9,7 +9,7 @@ collections_config:
         - index.html
       exclude:
         - collection
-        - collection/**/* # Deze pakt ook de inhoud van de map
+        - collection/**/*
         - components
         - components/**/*
         - node_modules
