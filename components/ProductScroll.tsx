@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ASSETS } from '../constants';
-import productData from '../product.json';
+import productData from '../data/pages/home/product.json';
 
 const ProductScroll: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
