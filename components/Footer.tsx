@@ -1,5 +1,6 @@
 import React from 'react';
 import { ASSETS } from '../constants';
+import footerData from '../footer.json';
 
 const Footer: React.FC = () => {
   return (
@@ -9,20 +10,20 @@ const Footer: React.FC = () => {
             <div>
                  <img src={ASSETS.logo} alt="zadelmaatje" className="h-16 w-auto mb-6 brightness-0 invert opacity-80" />
                 <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-4">
-                    Amore<span className="text-brand-accent">.</span>
+                    <span data-editable="text" data-prop="@file[/footer.json].logoText">{footerData.logoText}</span><span className="text-brand-accent">.</span>
                 </h2>
-                <p className="text-xl text-white/50 max-w-md font-light">
-                    Exclusieve pre-order – wees de eerste met een ‘zadelmaatje’.
+                <p className="text-xl text-white/50 max-w-md font-light" data-editable="text" data-prop="@file[/footer.json].logoSubtext">
+                    {footerData.logoSubtext}
                 </p>
             </div>
             
             <div className="flex flex-col gap-6 w-full md:w-auto">
-                <button className="bg-brand-accent text-white px-12 py-6 rounded-md text-lg font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 w-full md:w-auto text-center">
-                    Pre-order nu - €49,95
+                <button className="bg-brand-accent text-white px-12 py-6 rounded-md text-lg font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 w-full md:w-auto text-center" data-editable="text" data-prop="@file[/footer.json].ctaButton">
+                    {footerData.ctaButton}
                 </button>
                 <div className="flex justify-between md:justify-end gap-8 text-white/40 text-sm">
-                    <p>Verwachte levering: 15 dec</p>
-                    <p>100% tevredenheidsgarantie</p>
+                    <p data-editable="text" data-prop="@file[/footer.json].deliveryInfo">{footerData.deliveryInfo}</p>
+                    <p data-editable="text" data-prop="@file[/footer.json].guaranteeInfo">{footerData.guaranteeInfo}</p>
                 </div>
             </div>
         </div>
@@ -53,15 +54,15 @@ const Footer: React.FC = () => {
             </div>
              <div>
                 <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-widest">Contact</h4>
-                <p className="text-white/60 text-sm mb-2">info@zadelmaatje.nl</p>
-                <p className="text-white/60 text-sm">KvK-nummer: 96652195</p>
-                <p className="text-white/60 text-sm mt-4">Amsterdam, NL</p>
+                <p className="text-white/60 text-sm mb-2" data-editable="text" data-prop="@file[/footer.json].contactEmail">{footerData.contactEmail}</p>
+                <p className="text-white/60 text-sm" data-editable="text" data-prop="@file[/footer.json].contactKvk">{footerData.contactKvk}</p>
+                <p className="text-white/60 text-sm mt-4" data-editable="text" data-prop="@file[/footer.json].contactCity">{footerData.contactCity}</p>
             </div>
         </div>
 
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
-            <p>&copy; 2025 zadelmaatje. Alle rechten voorbehouden.</p>
-            <p>Liefde gaat voorop. Born in Amsterdam.</p>
+            <p data-editable="text" data-prop="@file[/footer.json].copyright">{footerData.copyright}</p>
+            <p data-editable="text" data-prop="@file[/footer.json].tagline">{footerData.tagline}</p>
         </div>
       </div>
     </footer>
