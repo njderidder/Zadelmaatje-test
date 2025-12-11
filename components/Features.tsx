@@ -18,7 +18,6 @@ const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number 
             <div className="mb-6 text-brand-accent group-hover:scale-110 transition-transform duration-300">
                 <Icon size={32} />
             </div>
-            {/* Slashes weggehaald: */}
             <h3 
                 className="text-2xl font-bold text-white mb-4"
                 data-editable="text"
