@@ -81,7 +81,7 @@ const ProductScroll: React.FC = () => {
                         <p className="text-white/70 max-w-lg font-light italic text-sm md:text-base">
                             {productData.slide3Quote}
                         </p>
-                        <p className="text-brand-accent mt-2 text-xs md:text-sm font-bold uppercase tracking-widest">{copy.slides.founders.signature}</p>
+                        <p className="text-white mt-2 text-xs md:text-sm font-bold uppercase tracking-widest">{copy.slides.founders.signature}</p>
                     </div>
                 </div>
             </div>
