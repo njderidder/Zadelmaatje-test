@@ -1,9 +1,10 @@
 import React from 'react';
-import { FEATURES } from '../constants';
 import { Shield, CloudRain, Zap, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
+import featuresData from '../features.json';
 
-const FeatureCard: React.FC<{ item: typeof FEATURES[0], index: number }> = ({ item, index }) => {
+// We gebruiken hier de types uit de JSON data voor typescript support, of 'any' voor gemak
+const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number }> = ({ item, index }) => {
     const icons = [Zap, CloudRain, Heart, Shield];
     const Icon = icons[index % icons.length];
 
@@ -18,8 +19,21 @@ const FeatureCard: React.FC<{ item: typeof FEATURES[0], index: number }> = ({ it
             <div className="mb-6 text-brand-accent group-hover:scale-110 transition-transform duration-300">
                 <Icon size={32} />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-            <p className="text-white/60 leading-relaxed font-light">{item.description}</p>
+            {/* Let op de index in de data-prop voor de lijst items */}
+            <h3 
+                className="text-2xl font-bold text-white mb-4"
+                data-editable="text"
+                data-prop={`@file[/features.json].items.${index}.title`}
+            >
+                {item.title}
+            </h3>
+            <p 
+                className="text-white/60 leading-relaxed font-light"
+                data-editable="text"
+                data-prop={`@file[/features.json].items.${index}.description`}
+            >
+                {item.description}
+            </p>
         </motion.div>
     );
 };
@@ -33,20 +47,23 @@ const Features: React.FC = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         className="text-sm uppercase tracking-widest text-brand-accent mb-4 font-bold"
+                        data-editable="text"
+                        data-prop="@file[/features.json].sectionTitle"
                     >
-                        Specificaties
+                        {featuresData.sectionTitle}
                     </motion.h2>
                     <motion.h3 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-6xl font-bold text-white max-w-3xl leading-tight"
                     >
-                        Ontworpen voor de <br /> Urban Jungle.
+                        <span data-editable="text" data-prop="@file[/features.json].mainTitleLine1">{featuresData.mainTitleLine1}</span> <br /> 
+                        <span data-editable="text" data-prop="@file[/features.json].mainTitleLine2">{featuresData.mainTitleLine2}</span>
                     </motion.h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {FEATURES.map((item, index) => (
+                    {featuresData.items.map((item, index) => (
                         <FeatureCard key={index} item={item} index={index} />
                     ))}
                 </div>
