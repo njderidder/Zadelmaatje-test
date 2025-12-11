@@ -1,6 +1,6 @@
 import React from 'react';
 import { ASSETS } from '../constants';
-import footerData from '../footer.json';
+import footerData from '../data/global/footer.json';
 
 const Footer: React.FC = () => {
   return (
