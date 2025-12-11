@@ -8,23 +8,17 @@ collections_config:
       include:
         - index.html
       exclude:
-        - collection
-        - collection/**/*
-        - components
-        - components/**/*
-        - node_modules
-        - dist
-        - public
-        - package.json
-        - package-lock.json
-        - tsconfig.json
-        - metadata.json
-        - vite.config.ts
-        - cloudcannon.config.yml
+        - collection/**
+        - components/**
+        - node_modules/**
+        - dist/**
+        - public/**
+        - '*.json'
         - '*.ts'
         - '*.js'
         - '*.md'
-        - .gitignore
+        - '*.yml'
+        - .*
 
   global_data:
     path: data/global
@@ -38,10 +32,10 @@ collections_config:
 
 data_config:
   hero:
-    path: data/pages/home/hero.json
+    path: /data/pages/home/hero.json
   product:
-    path: data/pages/home/product.json
+    path: /data/pages/home/product.json
   features:
-    path: data/pages/home/features.json
+    path: /data/pages/home/features.json
   footer:
-    path: data/global/footer.json
+    path: /data/global/footer.json
