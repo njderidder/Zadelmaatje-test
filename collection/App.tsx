@@ -2,12 +2,7 @@ import React, { Suspense } from "react";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 
-// 👇 Verwijder deze 'harde' imports
-// import ProductScroll from "../components/ProductScroll";
-// import Features from "../components/Features";
-// import Footer from "../components/Footer";
-
-// 👇 En vervang ze door deze 'lazy' imports:
+// 👇 We gebruiken lazy imports voor de onderdelen die 'onder de vouw' staan
 const ProductScroll = React.lazy(() => import("../components/ProductScroll"));
 const Features = React.lazy(() => import("../components/Features"));
 const Footer = React.lazy(() => import("../components/Footer"));
@@ -17,17 +12,16 @@ const App: React.FC = () => {
     <div className="bg-brand-dark min-h-screen text-white bg-noise selection:bg-brand-accent selection:text-white">
       <Navigation />
       <main>
-        {/* Hero blijft direct staan, want die moet meteen zichtbaar zijn */}
+        {/* Hero blijft direct staan voor instant feedback */}
         <Hero />
 
-        {/* 👇 Wrap de zware onderdelen in Suspense */}
+        {/* 👇 Suspense zorgt dat de rest pas laadt als het nodig is */}
         <Suspense fallback={<div className="h-screen bg-brand-dark" />}>
           <ProductScroll />
           <Features />
         </Suspense>
       </main>
       
-      {/* 👇 Footer mag ook lazy loaded worden */}
       <Suspense fallback={null}>
         <Footer />
       </Suspense>
