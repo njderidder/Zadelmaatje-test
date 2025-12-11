@@ -1,6 +1,6 @@
 import { NavItem, FeatureItem } from './types';
 
-// 👇 Dit zorgt dat linkjes op GitHub Pages (/Zadelmaatje-test/...) ook werken!
+// 👇 Zorgt dat linkjes op GitHub Pages (/Zadelmaatje-test/...) ook werken!
 const BASE = import.meta.env.BASE_URL;
 
 export const NAV_ITEMS: NavItem[] = [
@@ -38,26 +38,26 @@ export const HERO_COPY = {
 };
 
 export const ASSETS = {
-  // Let op: 'BASE' plakt automatisch de juiste map ervoor (of niets op Vercel)
-  // En: Ik heb de bestandsnamen aangepast aan jouw screenshot!
-  
   video: `${BASE}videos/tinyvid_optimized_zadelmaatje-Het-kussentje-waarbij-liefde-voorop-gaat.mp4`,
   logo: `${BASE}images/Logo-zadelmaatje-400-x-100-px.png`,
-  
   images: {
-    // 'stang-3' is de enige die je hebt geupload als main product shot
     productMain: `${BASE}images/zadelmaatje_amore_fietskussen_stang-3.jpg`,
     productLandscape: `${BASE}images/zadelmaatje_amore_fietskussen_stang-3.jpg`, 
     
-    lifestyle1: `${BASE}images/IMG_6739-768x512.jpg`,
-    lifestyle2: `${BASE}images/Website-afbeelding-2-1-600x400.png`, 
+    // 👇 AANGEPAST: Geen -768x512 meer
+    lifestyle1: `${BASE}images/IMG_6739.jpg`,
     
-    founders: `${BASE}images/zadelmaatje-oprichters-768x432.webp`,
+    // Let op: Ik zag 'Website-afbeelding-2-1' NIET in je laatste upload lijstje staan.
+    // Ik heb hem hier teruggezet naar IMG_6739.jpg als tijdelijke fix zodat hij niet crasht.
+    // Als je die foto wel hebt, upload hem dan en pas de naam hieronder aan!
+    lifestyle2: `${BASE}images/IMG_6739.jpg`, 
     
-    // Deze hadden allemaal -300x300 in de naam in jouw screenshot
-    square1: `${BASE}images/zadelmaatje-museumplein-voorop-de-stang-vanmoof-300x300.png`,
-    square2: `${BASE}images/1-1-300x300.png`,
-    square3: `${BASE}images/zadelmaatje-amsterdam-fietsen-300x300.png`,
-    square4: `${BASE}images/2-2-300x300.png`
+    founders: `${BASE}images/zadelmaatje-oprichters.webp`,
+    
+    // 👇 AANGEPAST: Alle -300x300 weggehaald
+    square1: `${BASE}images/zadelmaatje-museumplein-voorop-de-stang-vanmoof.png`,
+    square2: `${BASE}images/1-1.png`,
+    square3: `${BASE}images/zadelmaatje-amsterdam-fietsen.png`,
+    square4: `${BASE}images/2-2.png`
   }
 };
