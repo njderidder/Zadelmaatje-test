@@ -4,9 +4,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    
+    // 👇 SLIMME CHECK:
+    // Is dit GitHub Actions? Gebruik dan de submap.
+    // Is dit CloudCannon of lokaal? Gebruik dan de root.
+    const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+    
     return {
-      // 👇 ZET DEZE REGEL TERUG VOOR GITHUB PAGES:
-      base: '/Zadelmaatje-test/', 
+      base: isGitHubActions ? '/Zadelmaatje-test/' : '/',
       
       server: {
         port: 3000,
