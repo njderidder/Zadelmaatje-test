@@ -3,7 +3,6 @@ import { Shield, CloudRain, Zap, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import featuresData from '../data/pages/home/features.json';
 
-// We gebruiken hier de types uit de JSON data voor typescript support, of 'any' voor gemak
 const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number }> = ({ item, index }) => {
     const icons = [Zap, CloudRain, Heart, Shield];
     const Icon = icons[index % icons.length];
@@ -19,7 +18,7 @@ const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number 
             <div className="mb-6 text-brand-accent group-hover:scale-110 transition-transform duration-300">
                 <Icon size={32} />
             </div>
-            {/* Let op het nieuwe pad in de data-prop */}
+            {/* Slashes weggehaald: */}
             <h3 
                 className="text-2xl font-bold text-white mb-4"
                 data-editable="text"
