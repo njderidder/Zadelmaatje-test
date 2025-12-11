@@ -78,7 +78,7 @@ const ProductScroll: React.FC = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-6 md:p-10 flex flex-col justify-end">
                         <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{copy.slides.founders.title}</h3>
-                        <p className="text-white/70 max-w-lg font-light italic text-sm md:text-base">
+                        <p className="text-white max-w-lg font-bold italic text-sm md:text-base">
                             {productData.slide3Quote}
                         </p>
                         <p className="text-white mt-2 text-xs md:text-sm font-bold uppercase tracking-widest">{copy.slides.founders.signature}</p>
