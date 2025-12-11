@@ -1,16 +1,31 @@
 collections_config:
   pages:
     path: ''
-    name: Homepage      # <--- 1. Verandert 'Pages' naar 'Homepage' in het menu
+    name: Homepage
     icon: wysiwyg
     url: /
-    filter:             # <--- 2. Dit blok filtert wat je wel/niet ziet
+    filter:
       exclude:
-        - collection    # Verbergt de 'collection' map
-        - components    # Handig om ook je components map te verbergen
-        - node_modules  # Voor de zekerheid
-        - dist          # Voor de zekerheid
+        # 1. Verberg de mappen die je niet wilt zien
+        - collection
+        - collection/*
+        - components
+        - components/*
+        - node_modules
+        - dist
         - public
+        
+        # 2. Verberg specifieke technische bestanden (maar NIET je content json's)
+        - package.json
+        - package-lock.json
+        - tsconfig.json
+        - metadata.json
+        - vite.config.ts
+        - cloudcannon.config.yml
+        - '*.ts'
+        - '*.js'
+        - '*.md'
+        - .gitignore
 
 data_config:
   hero:
