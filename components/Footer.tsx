@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                 <button 
                     className="bg-brand-accent text-white px-12 py-6 rounded-md text-lg font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 w-full md:w-auto text-center" 
                     data-editable="text" 
-                    data-prop="@file[data/global/footer.json].ctaButton" // PAD GECORRIGEERD
+                    data-prop="@file[data/global/footer.json].ctaButton" 
                 >
                     {footerData.ctaButton}
                 </button>
@@ -33,13 +33,11 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-t border-white/10 pt-10">
-            {/* Dynamische Link Secties - ZONDER data-editable op de links zelf */}
+            {/* Dynamische Link Secties - GEEN data-editable op de items om errors te voorkomen */}
             {footerData.linkGroups.map((group, groupIndex) => (
                 <div key={groupIndex}>
                     <h4 
                         className="text-white font-bold mb-4 uppercase text-sm tracking-widest"
-                        data-editable="text"
-                        data-prop={`@file[data/global/footer.json].linkGroups.${groupIndex}.title`}
                     >
                         {group.title}
                     </h4>
@@ -49,7 +47,6 @@ const Footer: React.FC = () => {
                                 <a 
                                     href={link.url} 
                                     className="hover:text-brand-accent transition-colors"
-                                    // GEEN data-editable hier! Aanpassen doe je via Data Editor.
                                 >
                                     {link.label}
                                 </a>
