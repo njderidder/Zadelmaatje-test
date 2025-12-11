@@ -30,7 +30,7 @@ const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number 
             <p 
                 className="text-white/60 leading-relaxed font-light"
                 data-editable="text"
-                data-prop={`@file[/features.json].items.${index}.description`}
+                data-prop={`@file[/data/pages/home/features.json].items.${index}.description`}
             >
                 {item.description}
             </p>
