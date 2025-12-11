@@ -1,7 +1,7 @@
 import React from 'react';
 import { Shield, CloudRain, Zap, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
-import featuresData from '../features.json';
+import featuresData from '../data/pages/home/features.json';
 
 // We gebruiken hier de types uit de JSON data voor typescript support, of 'any' voor gemak
 const FeatureCard: React.FC<{ item: typeof featuresData.items[0], index: number }> = ({ item, index }) => {
