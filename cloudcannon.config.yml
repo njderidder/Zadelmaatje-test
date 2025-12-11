@@ -1,8 +1,16 @@
 collections_config:
   pages:
     path: ''
+    name: Homepage      # <--- 1. Verandert 'Pages' naar 'Homepage' in het menu
     icon: wysiwyg
     url: /
+    filter:             # <--- 2. Dit blok filtert wat je wel/niet ziet
+      exclude:
+        - collection    # Verbergt de 'collection' map
+        - components    # Handig om ook je components map te verbergen
+        - node_modules  # Voor de zekerheid
+        - dist          # Voor de zekerheid
+        - public
 
 data_config:
   hero:
