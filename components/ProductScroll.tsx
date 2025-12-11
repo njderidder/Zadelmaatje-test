@@ -39,8 +39,10 @@ const ProductScroll: React.FC = () => {
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-6 md:p-10 flex flex-col justify-end">
-                        <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{copy.slides.lifestyle.title}</h3>
-                        <p className="text-white/70 max-w-md font-light text-sm md:text-base">{copy.slides.lifestyle.description}</p>
+                        <h3 className="text-2xl md:text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/product.json].slide1Title">
+    {productData.slide1Title}</h3>
+                        <p className="text-white/70 max-w-md font-light text-sm md:text-base" data-editable="text" data-prop="@file[/product.json].slide1Description">
+    {productData.slide1Description}</p>
                     </div>
                 </div>
             </div>
@@ -77,11 +79,13 @@ const ProductScroll: React.FC = () => {
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-6 md:p-10 flex flex-col justify-end">
-                        <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{copy.slides.founders.title}</h3>
+                        <h3 className="text-2xl md:text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/product.json].slide3Title">
+    {productData.slide3Title}</h3>
                         <p className="text-white max-w-lg font-bold italic text-sm md:text-base">
                             {productData.slide3Quote}
                         </p>
-                        <p className="text-white mt-2 text-xs md:text-sm font-bold uppercase tracking-widest">{copy.slides.founders.signature}</p>
+                        <p className="text-white mt-2 text-xs md:text-sm font-bold uppercase tracking-widest" data-editable="text" data-prop="@file[/product.json].slide3SignOff">
+    {productData.slide3SignOff}</p>
                     </div>
                 </div>
             </div>
