@@ -35,17 +35,25 @@ export const HERO_COPY = {
 };
 
 export const ASSETS = {
-  video: "https://zadelmaatje.nl/wp-content/uploads/2025/10/tinyvid_optimized_zadelmaatje-Het-kussentje-waarbij-liefde-voorop-gaat.mp4",
-  logo: "https://zadelmaatje.nl/wp-content/uploads/2025/02/Logo-zadelmaatje-400-x-100-px.png",
+  // Let op: deze video staat in de map 'videos'
+  video: "/videos/tinyvid_optimized_zadelmaatje-Het-kussentje-waarbij-liefde-voorop-gaat.mp4",
+  logo: "/images/Logo-zadelmaatje-400-x-100-px.png",
   images: {
-    productMain: "https://zadelmaatje.nl/wp-content/uploads/2025/10/zadelmaatje_amore_fietskussen_stang-3.jpg",
-    productLandscape: "https://zadelmaatje.nl/wp-content/uploads/2025/10/zadelmaatje_amore_fietskussen_stang-1-edited-1.jpg",
-    lifestyle1: "https://zadelmaatje.nl/wp-content/uploads/2025/10/IMG_6739.jpg",
-    lifestyle2: "https://zadelmaatje.nl/wp-content/uploads/2025/10/Website-afbeelding-2-1.png",
-    founders: "https://zadelmaatje.nl/wp-content/uploads/2025/10/zadelmaatje-oprichters.webp",
-    square1: "https://zadelmaatje.nl/wp-content/uploads/2025/10/zadelmaatje-museumplein-voorop-de-stang-vanmoof.png",
-    square2: "https://zadelmaatje.nl/wp-content/uploads/2025/10/1-1.png",
-    square3: "https://zadelmaatje.nl/wp-content/uploads/2025/10/zadelmaatje-amsterdam-fietsen.png",
-    square4: "https://zadelmaatje.nl/wp-content/uploads/2025/10/2-2.png"
+    // Ik zag deze niet in je lijstje, dus heb even de stang-3 gepakt. 
+    // Als je een andere landscape foto hebt geupload, pas de naam hieronder aan!
+    productMain: "/images/zadelmaatje_amore_fietskussen_stang-3.jpg",
+    productLandscape: "/images/zadelmaatje_amore_fietskussen_stang-3.jpg", 
+    
+    lifestyle1: "/images/IMG_6739-768x512.jpg",
+    
+    // Deze zag ik niet in je uploadlijst, check even of je deze hebt geupload, anders werkt hij niet!
+    // Ik heb hem even op de IMG_6739 gezet als fallback.
+    lifestyle2: "/images/IMG_6739-768x512.jpg", 
+    
+    founders: "/images/zadelmaatje-oprichters-768x432.webp",
+    square1: "/images/zadelmaatje-museumplein-voorop-de-stang-vanmoof-300x300.png",
+    square2: "/images/1-1-300x300.png",
+    square3: "/images/zadelmaatje-amsterdam-fietsen-300x300.png",
+    square4: "/images/2-2-300x300.png"
   }
 };
