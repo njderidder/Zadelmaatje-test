@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ASSETS } from "../constants";
 import { fadeUp, staggerContainer } from "../services/animationService";
 import heroCopy from "../data/pages/home/hero.json";
+
+const BASE = import.meta.env.BASE_URL;
+const getPath = (path: string) => `${BASE}${path}`.replace('//', '/');
 
 const Hero: React.FC = () => {
   return (
@@ -14,10 +16,10 @@ const Hero: React.FC = () => {
           loop
           muted
           playsInline
-          poster={ASSETS.images.productLandscape} 
+          poster={getPath(heroCopy.poster)} 
           className="w-full h-full object-cover opacity-60"
         >
-          <source src={ASSETS.video} type="video/mp4" />
+          <source src={getPath(heroCopy.video)} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-brand-dark/40 mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent" />
