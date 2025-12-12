@@ -1,7 +1,12 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ASSETS } from '../constants';
 import productData from '../data/pages/home/product.json';
+
+// Haal de Base URL op voor GitHub Pages
+const BASE = import.meta.env.BASE_URL;
+
+// Helper om te zorgen dat we geen dubbele slashes krijgen als BASE '/' is
+const getImg = (path: string) => `${BASE}${path}`.replace('//', '/');
 
 const ProductScroll: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -34,9 +39,11 @@ const ProductScroll: React.FC = () => {
             <div className="min-w-[85vw] md:min-w-[60vw] relative group">
                 <div className="aspect-square md:aspect-[16/9] rounded-sm overflow-hidden bg-zinc-900 relative">
                      <img 
-                        src={ASSETS.images.lifestyle1}
+                        src={getImg(productData.slide1Image)}
                         alt="Samen op weg" 
-                        className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" 
+                        className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0"
+                        data-editable="image"
+                        data-prop="@file[/data/pages/home/product.json].slide1Image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-6 md:p-10 flex flex-col justify-end">
                         <h3 className="text-2xl md:text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/data/pages/home/product.json].slide1Title">
@@ -51,9 +58,11 @@ const ProductScroll: React.FC = () => {
             <div className="min-w-[85vw] md:min-w-[50vw] relative group">
                 <div className="aspect-[3/4] rounded-sm overflow-hidden bg-zinc-900 relative">
                      <img 
-                        src={ASSETS.images.productMain}
+                        src={getImg(productData.slide2Image)}
                         alt="Product Detail" 
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
+                        data-editable="image"
+                        data-prop="@file[/data/pages/home/product.json].slide2Image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-10 flex flex-col justify-end">
                         <h3 className="text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/data/pages/home/product.json].slide2Title">{productData.slide2Title}</h3>
@@ -64,19 +73,21 @@ const ProductScroll: React.FC = () => {
 
             {/* Slide 3 - Grid of images */}
             <div className="min-w-[90vw] md:min-w-[70vw] grid grid-cols-2 gap-4">
-                 <img src={ASSETS.images.square1} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 1" />
-                 <img src={ASSETS.images.square2} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 2" />
-                 <img src={ASSETS.images.square3} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 3" />
-                 <img src={ASSETS.images.square4} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 4" />
+                 <img src={getImg(productData.grid1)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 1" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid1" />
+                 <img src={getImg(productData.grid2)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 2" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid2" />
+                 <img src={getImg(productData.grid3)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 3" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid3" />
+                 <img src={getImg(productData.grid4)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 4" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid4" />
             </div>
 
              {/* Slide 4 - Founders */}
             <div className="min-w-[85vw] md:min-w-[60vw] relative group">
                 <div className="aspect-square md:aspect-[16/9] rounded-sm overflow-hidden bg-zinc-900 relative">
                      <img 
-                        src={ASSETS.images.founders}
+                        src={getImg(productData.slide3Image)}
                         alt="Team zadelmaatje" 
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
+                        data-editable="image"
+                        data-prop="@file[/data/pages/home/product.json].slide3Image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-6 md:p-10 flex flex-col justify-end">
                         <h3 className="text-2xl md:text-4xl font-bold text-white mb-2" data-editable="text" data-prop="@file[/data/pages/home/product.json].slide3Title">
