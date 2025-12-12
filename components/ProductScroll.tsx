@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { ASSETS } from '../constants'; // Mag weg als je het niet meer gebruikt, maar kan geen kwaad
 import productData from '../data/pages/home/product.json';
 
 // Haal de Base URL op voor GitHub Pages
@@ -42,7 +43,7 @@ const ProductScroll: React.FC = () => {
                         src={getImg(productData.slide1Image)}
                         alt="Samen op weg" 
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        data-editable="image"
+                        // 👇 data-editable="image" WEGGEHAALD
                         data-prop="@file[/data/pages/home/product.json].slide1Image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-6 md:p-10 flex flex-col justify-end">
@@ -61,7 +62,7 @@ const ProductScroll: React.FC = () => {
                         src={getImg(productData.slide2Image)}
                         alt="Product Detail" 
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
-                        data-editable="image"
+                        // 👇 data-editable="image" WEGGEHAALD
                         data-prop="@file[/data/pages/home/product.json].slide2Image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-10 flex flex-col justify-end">
@@ -73,10 +74,11 @@ const ProductScroll: React.FC = () => {
 
             {/* Slide 3 - Grid of images */}
             <div className="min-w-[90vw] md:min-w-[70vw] grid grid-cols-2 gap-4">
-                 <img src={getImg(productData.grid1)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 1" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid1" />
-                 <img src={getImg(productData.grid2)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 2" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid2" />
-                 <img src={getImg(productData.grid3)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 3" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid3" />
-                 <img src={getImg(productData.grid4)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 4" data-editable="image" data-prop="@file[/data/pages/home/product.json].grid4" />
+                 {/* 👇 Bij al deze 4 ook data-editable="image" weggehaald */}
+                 <img src={getImg(productData.grid1)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 1" data-prop="@file[/data/pages/home/product.json].grid1" />
+                 <img src={getImg(productData.grid2)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 2" data-prop="@file[/data/pages/home/product.json].grid2" />
+                 <img src={getImg(productData.grid3)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 3" data-prop="@file[/data/pages/home/product.json].grid3" />
+                 <img src={getImg(productData.grid4)} className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Detail 4" data-prop="@file[/data/pages/home/product.json].grid4" />
             </div>
 
              {/* Slide 4 - Founders */}
@@ -86,7 +88,7 @@ const ProductScroll: React.FC = () => {
                         src={getImg(productData.slide3Image)}
                         alt="Team zadelmaatje" 
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
-                        data-editable="image"
+                        // 👇 data-editable="image" WEGGEHAALD
                         data-prop="@file[/data/pages/home/product.json].slide3Image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-6 md:p-10 flex flex-col justify-end">
